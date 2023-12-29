@@ -1,0 +1,71 @@
+nav{
+    border-bottom: 1px solid black;
+    z-index: 1000 !important;
+    position: fixed !important;
+    height: 10vh;
+    width: 100% !important;
+}
+
+.navbar-brand{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .navbar-containter{
+        justify-content: space-between !important;
+    }
+
+    .user-name {
+        font-size: 36px;
+    }
+
+    .user-image {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+
+    .nav-svg {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+
+    .nav-dropdown li a {
+        font-size: 32px;
+    }
+
+    .dropdown-svg {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .navbar-content-container{
+        width: 35rem!important;
+        z-index: 1000;
+    }
+
+    #sidebarClose {
+        fill: white !important;
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+
+    .sidebar-svg {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .sidebar-text {
+        font-size: 32px !important;
+        margin-left: 4rem !important;
+    }
+
+    #offcanvasScrollingLabel{
+        font-size: 56px;
+    }
+
+    .sidebar-text-title {
+        font-size: 28px !important;
+    }
+}
