@@ -1,0 +1,41 @@
+.Hs-bg {
+    background-color: #fff;
+    border-bottom: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
+
+.side-2{
+    z-index: 66 !important;
+}
+
+.Hs-color {
+    color: #230798;
+}
+
+.sidebar-links:hover {
+    background-color: #d7d7d7;
+    color: #230798;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar-links svg:hover {
+    fill: #230567;
+}
+
+.sidebar-anchor-tags{
+    text-decoration: none;
+}
+
+.sidebar-text{
+    color: rgb(55, 54, 54);
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    .Hs-bg {
+        background-color: #b3b3b3;
+        border-bottom: 1px solid black !important;
+        border-right: 1px solid black !important;
+    }
+}

@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Breadcrumb Container */
+section.aria-label {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  /* Breadcrumb List */
+  ol.breadcrumb {
+    /* background-color: #f8f9fa;  */
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Breadcrumb Item */
+  li.breadcrumb-item {
+    display: inline;
+    margin-right: 5px;
+  }
+  
+  /* Breadcrumb Link */
+  li.breadcrumb-item a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  /* Active Breadcrumb Item */
+  li.breadcrumb-item.active {
+    color: #495057; /* Active item color */
+  }
+  
+  /* Separator (you can customize this based on your design) */
+  li.breadcrumb-item:not(:last-child)::after {
+    content: '>';
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #6c757d; /* Separator color */
+  }
+  
+  .writeup-container{
+      border-left-style: solid;
+      border-left-width: 1.6px;
+      border-left-color: rgb(218, 221, 225);
+      width: 100%;
+  }
+
+  /* .container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+} */
+
+.first-section{
+    overflow: auto; /* Allow scrolling for the entire page */
+}
+
+.content-container {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-top: 50px;
+}
+
+.nextPage-Container{
+    height: auto;
+    width: 439px;
+    border: 2px solid rgb(218, 221, 225);;
+    border-radius: 5px;
+    display: flex !important;
+}
+
+.nextPage-Container:hover{
+    border-color: black;
+    cursor: pointer;
+}
+
+.first-nextpage-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.second-nextpage-text{
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+
+/* API Docs */
+
+.apidocs-writeup-container{
+    
+    width: 100%;
+}
+
+.apis-container{
+    height: auto;
+    width: 100%;
+    border: 2px solid rgb(218, 221, 225);;
+    border-radius: 5px;
+    display: flex !important;
+    justify-content: end !important;
+}
+
+.first-apis-text{
+    font-size: 19.2px;
+    font-weight: bold;
+    color: black;
+}
+
+.second-apis-text{
+    font-size: 12.8px;
+    color: black;
+}
+
+  @media (max-width: 991px) {
+    .content-container {
+        overflow-y: auto;
+        flex-grow: 1;
+        margin-top: 80px !important;
+    }
+    
+    .writeup-container{
+        width: 100%;
+    }
+
+    .cnt{
+        width: 100% !important;
+    }
+
+    .content-container-two{
+        width: 100% !important;
+    }
+
+    .apidocs-writeup-container-two{
+        display: block !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    .nextPage-Container{
+        width: 100% !important;
+    }
+
+    .second-nextpage-text{
+        font-size: 14px;
+    }
+
+    /* .apis-container-two{
+        width: 100% !important;
+    } */
+  }
