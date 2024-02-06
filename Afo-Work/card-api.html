@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card API | Wallet Api Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Sidebar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/PageNavBar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/style.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+</style>
+<body>
+    <section class="first-section">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid ps-2 pe-2 justify-content-between navbar-containter">
+                <!-- Sidebar Toggle Button -->
+                <div class="col-1 d-lg-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list nav-svg ms-3" id="sidebarToggle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+        
+                <a class="navbar-brand ms-5">Api Documentation</a>
+        
+                <form class="d-flex me-2 align-items-center " role="search">
+                    
+        
+        
+                </form>
+            </div>
+        </nav>
+        
+        <div class="d-flex">
+            <div class="side-2 d-none d-lg-block" style="width: 20%;">
+                <div class="offcanvas offcanvas-start custom-offcanvas Hs-bg navbar-content-container" style="width: 16rem; height: 91.3%; margin-top: auto;" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <!-- Remove the close button -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#000" class="bi bi-x d-lg-none close-button d-none" id="sidebarClose" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </div>
+                    <div class="offcanvas-body p-0">
+                
+                        <div class="sidebar-links">
+                            <a class="sidebar-anchor-tags" href="index.html">
+                                <div class="d-flex align-items-center p-2" style=" width: 100%; border-radius: 5px;">
+                
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-view-list ms-2 sidebar-svg" viewBox="0 0 16 16">
+                                        <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z" />
+                                    </svg> -->
+                                    <h6 class="d-flex justify-content-center mb-0 ms-3 sidebar-text">Getting Started</h6>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="sidebar-links">
+                            <a class="sidebar-anchor-tags" href="Apidocs.html">
+                                <div class="d-flex align-items-center p-2" style=" width: 100%; border-radius: 5px;">
+                
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-view-list ms-2 sidebar-svg" viewBox="0 0 16 16">
+                                        <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z" />
+                                    </svg> -->
+                                    <h6 class="d-flex justify-content-center mb-0 ms-3 sidebar-text">API - Docs</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-links">
+                            <a class="sidebar-anchor-tags" href="bills-payment-api.html">
+                                <div class="d-flex align-items-center p-2" style=" width: 100%; border-radius: 5px;">
+                
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-view-list ms-2 sidebar-svg" viewBox="0 0 16 16">
+                                        <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z" />
+                                    </svg> -->
+                                    <h6 class="d-flex justify-content-center mb-0 ms-3 sidebar-text">Bill Payment API</h6>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sidebar-links">
+                            <a class="sidebar-anchor-tags" href="card-api.html">
+                                <div class="d-flex align-items-center p-2" style=" width: 100%; border-radius: 5px;">
+                
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-view-list ms-2 sidebar-svg" viewBox="0 0 16 16">
+                                        <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z" />
+                                    </svg> -->
+                                    <h6 class="d-flex justify-content-center mb-0 ms-3 sidebar-text">Card API</h6>
+                                </div>
+                            </a>
+                        </div>
+                
+                    </div>
+                </div>
+            
+            </div>
+            <div class="content-container p-4" style="width: 100%;">
+                <div class="d-flex content-container-two" style="width: 87%;">
+                    <div class="cnt" style="width: 87%;">
+                        <section aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">
+                                Home
+                              </a></li>
+                              <li class=" active" aria-current="page">
+                                <span class="badge text-bg-secondary">API - Docs</span>
+                              </li>
+                              <!-- <li class="breadcrumb-item">Current Page</li> -->
+                            </ol>
+                        </section>
+                          
+                          
+                       <h1 class="mb-4" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">Bills Payment API</h1>
+
+                       <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">1.0 Authorization</h5>
+                       
+                       <div class="apidocs-writeup-container mt-5" style="width: 100%;">
+                           <div style="width: 97%;" class="mb-3">
+                                Authentication for the Bills Payment APIs involves utilizing an access token generated through the vbaas portal. This token provides authorization for making API calls to the Bills Payment API.
+                           </div>
+
+                           <div style="width: 97%;" class="mt-4 mb-4">
+                            <span style="font-weight: bold;">NB:</span> In order to regenerate the access token, use this curl request in the test environment:
+                           </div>
+
+                           <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                <code style="white-space: nowrap; display: block;">
+                                    <span class="d-lg-block code-span">curl --location https://api-devapps.vfdbank.systems/vfd-tech/baas-portal/v1/baasauth/token</span>
+                                    <span class="d-lg-block code-span">--header Content-Type: application/json \</span>
+                                    <span class="d-lg-block code-span">--header Accept: application/json \</span>
+                                    <span class="d-lg-block code-span">--data:{"consumerKey" : "XXXXXX", "consumerSecret":"XXXXXX", "validityTime":"-1"}</span>
+                                    
+                                </code>
+                           </section>
+
+                           <div style="width: 97%;" class="mt-4 mb-4">
+                            OR in the live environment
+                           </div>
+
+                           <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                <code style="white-space: nowrap; display: block;">
+                                    <span class="d-lg-block code-span">curl --location https://api-devapps.vfdbank.systems/vfd-tech/baas-portal/v1/baasauth/token</span>
+                                    <span class="d-lg-block code-span">--header Content-Type: application/json \</span>
+                                    <span class="d-lg-block code-span">--header Accept: application/json \</span>
+                                    <span class="d-lg-block code-span">--data:{"consumerKey" : "XXXXXX", "consumerSecret":"XXXXXX", "validityTime":"-1"}</span>
+                                    
+                                </code>
+                            </section>
+
+                            <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">2.0 Base Url</h5>
+
+                            <div style="width: 97%;" class="mb-3">
+                                    All requests to the Bills Payment API must be done using the web API URL below.
+                                </div>
+
+                            <div style="width: 97%;" class="mt-4 mb-4">
+                                <span style="font-weight: bold;">Test Environment:</span>  <a class="sidebar-anchor-tags" href="https://api-devapps.vfdbank.systems/vtech-wallet/api/v1.1/billspaymentstore">https://api-devapps.vfdbank.systems/vtech-wallet/api/v1.1/billspaymentstore</a>
+                            </div>
+
+                            <div style="width: 97%;" class="mt-4 mb-4">
+                                <span style="font-weight: bold;">LIVE Environment:</span>  <a class="sidebar-anchor-tags" href="https://api-apps.vfdbank.systems/vtech-wallet/api/v1/billspaymentstore">https://api-apps.vfdbank.systems/vtech-wallet/api/v1/billspaymentstore</a>
+                            </div>
+
+
+                            <section class="p-4" style="background-color: rgb(237, 250, 254); max-width: 100%; border-radius: 10px; border-left-style: solid; border-left-color: rgb(76, 179, 212); border-left-width: 6px; font-weight: bold;">
+                                <div class="d-flex align-items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                    </svg>
+                                    <p class="mb-0 ms-2">INFO</p>
+                                </div>
+                                The Bills payment API allows developers to integrate bill payment functionality into their applications or systems. It provides a standardized way to interact with bill payment service providers and facilitates the automation of payment processes.
+                            </section>
+
+                            <div>
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">BILLER CATEGORY</h5>
+
+                                <div style="width: 97%;" class="mb-3">
+                                    <span>API Context :</span>
+                                    <span class="badge" style="background-color: rgb(231, 231, 231); color: black;">/billercategory</span>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">Description:</span> This endpoint returns biller categories
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">API METHOD: GET</span> 
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">REQUEST HEADERS</span>
+                                </div>
+
+                                <div style="width: 30%;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr style="background-color: rgb(231, 231, 231) !important;">
+                                                    <th>Key</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>AccessToken</td>
+                                                    <td>{{token}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">SAMPLE RESPONSE</span>
+                                </div>
+
+                                <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                    <code style="white-space: nowrap; display: block;">
+                                        <span class="d-lg-block code-span">{</span>
+                                        <span class="d-lg-block code-span ms-5">"status": "00",</span>
+                                        <span class="d-lg-block code-span ms-5">"message": "Successfully Returned Biller Category",</span>
+                                        <span class="d-lg-block code-span ms-5">"data": [</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                        <span class="d-lg-block code-span ms-5 ps-5">"category": "Airtime"</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">},</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                        <span class="d-lg-block code-span ms-5 ps-5">"category": "Cable TV"</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">},</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                        <span class="d-lg-block code-span ms-5 ps-5">"category": "Data"</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">},</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                        <span class="d-lg-block code-span ms-5 ps-5">"category": "Internet Subscription"</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">},</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                        <span class="d-lg-block code-span ms-5 ps-5">"category": "Utility"</span>
+                                        <span class="d-lg-block code-span ms-5 ps-3">}</span>
+                                        <span class="d-lg-block code-span ms-4">]</span>
+                                        <span class="d-lg-block code-span">}</span> 
+                                    </code>
+                                </section>
+                            </div>
+
+                            <div>
+
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">BILLER LIST</h5>
+
+                                <div style="width: 97%;" class="mb-3">
+                                    <span>API Context :</span>
+                                    <span class="badge" style="background-color: rgb(231, 231, 231); color: black;">/billerlist?categoryName={categoryName}</span>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">Description:</span> This endpoint list of billers for a particular category
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">API METHOD: GET</span> 
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">REQUEST HEADERS</span>
+                                </div>
+
+                                <div style="width: 30%;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr style="background-color: rgb(231, 231, 231) !important;">
+                                                    <th>Key</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>AccessToken</td>
+                                                    <td>{{token}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div style="width: 97%;" class="mt-4 mb-4">
+                                        <span style="font-weight: bold;">QUERY PARAMETERS</span>
+                                    </div>
+
+                                    <div style="width: 70%;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Description</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>categoryName</td>
+                                                    <td>This allows you to fetch biller list based on category</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+
+                                <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "00",</span>
+                                                <span class="d-lg-block code-span ms-5">"message": "Successfully Returned Biller list",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": [</span>
+                                                <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"id": "abuja_electric_prepaid",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"name": "Abuja Prepaid",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"division": "B",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"product": "398",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"category": "Utility"</span>
+                                                <span class="d-lg-block code-span ms-5 ps-3">},</span>
+                                                <span class="d-lg-block code-span ms-5 ps-3">{</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"id": "AEDC",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"name": "Abuja Electricity",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"division": "F",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"product": "408",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5">"category": "Utility"</span>
+                                                <span class="d-lg-block code-span ms-5 ps-3">}</span>
+                                                <span class="d-lg-block code-span ms-4">]</span>
+                                                <span class="d-lg-block code-span">}</span> 
+                                            </code>
+                                        </section>
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">BILLER ITEMS</h5>
+
+                                <div style="width: 97%;" class="mb-3">
+                                    <span>API Context :</span>
+                                    <span class="badge" style="background-color: rgb(231, 231, 231); color: black; overflow-x: auto; max-width: 100%;">/billerItems?billerId={billerId}&divisionId={divisionId}&productId={productId}</span>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">Description:</span> This endpoint returns all items under a biller
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">API METHOD: GET</span> 
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">REQUEST HEADERS</span>
+                                </div>
+
+                                    <div style="width: 30%;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr style="background-color: rgb(231, 231, 231) !important;">
+                                                    <th>Key</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>AccessToken</td>
+                                                    <td>{{token}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div style="width: 97%;" class="mt-4 mb-4">
+                                        <span style="font-weight: bold;">QUERY PARAMETERS</span>
+                                    </div>
+
+                                   
+
+                                    <div style="width: 60%;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Value</th>
+                                                    <th>Description</th>
+                                                    <th>Status</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>billerId</td>
+                                                    <td>airng</td>
+                                                    <td>This is returned from biller List</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>divisionId</td>
+                                                    <td>C</td>
+                                                    <td>This is returned from biller List</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>productId</td>
+                                                    <td>423</td>
+                                                    <td>This is returned from biller List</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+
+                                <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "00",</span>
+                                                <span class="d-lg-block code-span ms-5">"message": "Successfully Returned Biller Items",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": {</span>
+                                                <span class="d-lg-block code-span ms-5 ps-4">"paymentitems": [</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-2"></span>{</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"id": "5",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"billerId": "airng",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"amount": "0",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"code": "2",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"paymentItemName": "AIRNG",</span> 
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"productId": "423",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"paymentItemId": "423",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"currencySymbol": "NGN",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"isAmountFixed": "false",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"itemFee": "0",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"itemCurrencySymbol": "NGN",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"pictureId": "87",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"paymentCode": "airng",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"sortOrder": "4",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"billerType": "MO",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"payDirectitemCode": "airng",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"currencyCode": "566",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"division": "C",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"categoryId": "3",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-5"></span>"createdDate": "2022-10-18 10:11:43.0"</span>
+                                                <span class="d-lg-block code-span ms-5 ps-5"><span class="ms-2"></span>}</span>
+                                                <span class="d-lg-block code-span ms-4 ps-5">]</span>
+                                                <span class="d-lg-block code-span ms-4">}</span> 
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">PAY BILLS</h5>
+
+                                <div style="width: 97%;" class="mb-3">
+                                    <span>API Context :</span>
+                                    <span class="badge" style="background-color: rgb(231, 231, 231); color: black;">/pay</span>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">Description:</span> This endpoint is used to initiate a bill payment
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">API METHOD: Post</span> 
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">REQUEST HEADERS</span>
+                                </div>
+
+                                <div style="width: 30%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr style="background-color: rgb(231, 231, 231) !important;">
+                                                <th>Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>AccessToken</td>
+                                                <td>{{token}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">SAMPLE REQUEST</span>
+                                </div>
+
+                                <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                    <code style="white-space: nowrap; display: block;">
+                                        <span class="d-lg-block code-span">{</span>
+                                        <span class="d-lg-block code-span ms-5">"customerId": "09071046909",</span>
+                                        <span class="d-lg-block code-span ms-5">"amount": "2150",</span>
+                                        <span class="d-lg-block code-span ms-5">"division": "C",</span>
+                                        <span class="d-lg-block code-span ms-5">"paymentItem": "425",</span>
+                                        <span class="d-lg-block code-span ms-5">"productId": "399",</span>
+                                        <span class="d-lg-block code-span ms-5">"billerId": "dstv",</span>
+                                        <span class="d-lg-block code-span ms-5">"reference": "rosapay-1234"</span>
+                                        <span class="d-lg-block code-span">}</span> 
+                  
+                                    </code>
+                                </section>
+
+                                <div style="width: 100%;" class="mt-5">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Description</th>
+                                                    <th>Status</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>customerId</td>
+                                                    <td>This allows you to enter the customer Id, e.g Phone Number or Meter Token</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>amount</td>
+                                                    <td>amount to acquire service</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>division</td>
+                                                    <td>This is returned from biller List</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>paymentItem</td>
+                                                    <td>This is returned from biller items as paymentCode</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>productId</td>
+                                                    <td>This is returned from biller List</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>billerId</td>
+                                                    <td>This signifies the ID of the biller it is returned from the Biller List</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>reference</td>
+                                                    <td>This signifies a unique reference to identify transactions and must be pre-fixed with walletName or name of choice e.g rosapay-1234</td>
+                                                    <td>Mandatory</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    
+
+                                    <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "00",</span>
+                                                <span class="d-lg-block code-span ms-5">"message": "Successful payment",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": {</span>
+                                                <span class="d-lg-block code-span ms-5 ps-4">"reference": "rosapay-1234"</span>
+                                                <span class="d-lg-block code-span ms-4 ps-4">}</span> 
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                    </div>
+
+                                    <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE FAILED RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "99",</span>
+                                                <span class="d-lg-block code-span ms-5">"message": "Failed Transaction",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": {</span>
+                                                <span class="d-lg-block code-span ms-5 ps-4">"reference": "rosapay-1234"</span>
+                                                <span class="d-lg-block code-span ms-4 ps-4">}</span> 
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">TRANSACTION STATUS</h5>
+
+                                <div style="width: 97%;" class="mb-3">
+                                    <span>API Context :</span>
+                                    <span class="badge" style="background-color: rgb(231, 231, 231); color: black;">/transactionStatus?transactionId={transactionId}</span>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">Description:</span> This endpoint returns the status of a transaction
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">API METHOD: GET</span> 
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">REQUEST HEADERS</span>
+                                </div>
+
+                                <div style="width: 30%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr style="background-color: rgb(231, 231, 231) !important;">
+                                                <th>Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>AccessToken</td>
+                                                <td>{{token}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">QUERY PARAMETERS</span>
+                                </div>
+
+                                <div style="width: 60%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>transactionId</th>
+                                                <th>test-1244werhhti34</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div style="width: 60%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Field</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>transactionId</td>
+                                                <td>transaction reference</td>
+                                                <td>Mandatory</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                               
+
+                                <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "00",</span>
+                                                <span class="d-lg-block code-span ms-5">"message": "Successful Transaction Retrieval",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": {</span>
+                                                <span class="d-lg-block code-span ms-5 ps-4">"transactionStatus": "00",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-4">"amount": "500",</span>
+                                                <span class="d-lg-block code-span ms-5 ps-4">"token": ""</span>
+                                                <span class="d-lg-block code-span ms-4 ps-4">}</span> 
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                </div>
+
+                                <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">Sample Not Found Response</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "99",</span>
+                                                <span class="d-lg-block code-span ms-5">"message": "No Transaction!"</span>
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">VALIDATE CUSTOMER</h5>
+
+                                <div style="width: 97%;" class="mb-3">
+                                    <span>API Context :</span>
+                                    <span class="badge" style="background-color: rgb(231, 231, 231); color: black;">/customervalidate?divisionId={divisionId}&paymentItem={paymentItem}&customerId={customerId}&billerId={billerId}</span>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">Description:</span> This endpoint allows you validate the customerId input field i.e meter token before making the electricity payment.
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">API METHOD: GET</span> 
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">REQUEST HEADERS</span>
+                                </div>
+
+                                <div style="width: 30%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr style="background-color: rgb(231, 231, 231) !important;">
+                                                <th>Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>AccessToken</td>
+                                                <td>{{token}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div style="width: 97%;" class="mt-4 mb-4">
+                                    <span style="font-weight: bold;">QUERY PARAMETERS</span>
+                                </div>
+
+                                <div style="width: 100%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <strong>Query Parameters</strong>
+                                                </th>
+                                                <th>Description</th>
+                                                <th>Required</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>customerId</td>
+                                                <td>Customer Id i.e Meter Token</td>
+                                                <td>Mandatory</td>
+                                            </tr>
+                                            <tr>
+                                                <td>divisionId</td>
+                                                <td>This is returned from biller List as division</td>
+                                                <td>Mandatory</td>
+                                            </tr>
+                                            <tr>
+                                                <td>paymentItem</td>
+                                                <td>This is returned from biller items as paymentCode</td>
+                                                <td>Mandatory</td>
+                                            </tr>
+                                            <tr>
+                                                <td>billerId</td>
+                                                <td>This signifies the ID of the biller it is returned from the Biller List</td>
+                                                <td>Mandatory</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                               
+
+                                <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE SUCCESS RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "00",</span>
+                                                <span class="d-lg-block code-span ms-5">"message":"Successfully validated customer",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": {}</span>               
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                </div>
+
+                                <div>
+                                        <div style="width: 97%;" class="mt-4 mb-4">
+                                            <span style="font-weight: bold;">SAMPLE FAILED RESPONSE</span>
+                                        </div>
+                        
+                                        <section class="p-4" style="background-color: rgb(231, 231, 221); text-align: left; padding: 5px; overflow-x: auto; max-width: 100%; border-radius: 10px;">
+                                            <code style="white-space: nowrap; display: block;">
+                                                <span class="d-lg-block code-span">{</span>
+                                                <span class="d-lg-block code-span ms-5">"status": "99",</span>
+                                                <span class="d-lg-block code-span ms-5">"message":"Failed validation",</span>
+                                                <span class="d-lg-block code-span ms-5">"data": {}</span>               
+                                                <span class="d-lg-block code-span">}</span> 
+                          
+                                            </code>
+                                        </section>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+                                <h5 class="mb-4 mt-5" style="font-style: bold; font-family: 'Archivo Black', sans-serif;">CODES DESCRIPTION FOR BILLS PAYMENT API</h5>
+
+                                <div style="width: 65%;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Code</th>
+                                                <th>Description</th>
+                                                <th>Reversal Instruction</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>00</td>
+                                                <td>Successful</td>
+                                                <td>No Reversal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>09</td>
+                                                <td>Pending</td>
+                                                <td>No Reversal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>99</td>
+                                                <td>Failed</td>
+                                                <td>Reversal</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                       
+
+                            <div class="d-flex" style="width: 100%;">
+                                <a class="sidebar-anchor-tags" href="Apidocs.html">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="d-flex justify-content-start nextPage-Container mt-5">
+                                            <div class="d-flex flex-column p-3">
+                                                <div class="first-nextpage-text">Previous</div>
+                                                <div class="second-nextpage-text"><< API - Docs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="sidebar-anchor-tags" href="Apidocs.html">
+                                    <div class="d-flex justify-content-end ms-4">
+                                        <div class="d-flex justify-content-end nextPage-Container mt-5">
+                                            <div class="d-flex align-items-end flex-column p-3">
+                                                <div class="first-nextpage-text">Next</div>
+                                                <div class="second-nextpage-text">Card Api >></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasScrolling'));
+            myOffcanvas.show();
+        });
+    </script>
+
+    <script>
+        // Sidebar Toggle
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.querySelector('.side-2').classList.toggle('d-none');
+            // Toggle the visibility of the close button
+            document.querySelector('.close-button').classList.toggle('d-none');
+        });
+
+        // Close Button
+        document.querySelector('.close-button').addEventListener('click', function () {
+            document.querySelector('.side-2').classList.add('d-none');
+            // Hide the close button when the sidebar is closed
+            document.querySelector('.close-button').classList.add('d-none');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

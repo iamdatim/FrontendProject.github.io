@@ -103,10 +103,15 @@ section.aria-label {
 .apis-container{
     height: auto;
     width: 100%;
-    border: 2px solid rgb(218, 221, 225);;
+    border: 2px solid rgb(230, 231, 232);;
     border-radius: 5px;
     display: flex !important;
     justify-content: end !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.apis-container:hover{
+    border-color: black;
 }
 
 .first-apis-text{
@@ -120,6 +125,10 @@ section.aria-label {
     color: black;
 }
 
+.code-span{
+    display: inline-block;
+
+}
   @media (max-width: 991px) {
     .content-container {
         overflow-y: auto;
@@ -151,6 +160,10 @@ section.aria-label {
 
     .second-nextpage-text{
         font-size: 14px;
+    }
+
+    .code-span {
+        display: block;
     }
 
     /* .apis-container-two{
